@@ -1,0 +1,5 @@
+@for (item of categoriesList; track item.nomcategorie) {
+    <li> {{ item.nomcategorie }} </li>
+  } @empty {
+    <li> There are no items. </li>
+  }
