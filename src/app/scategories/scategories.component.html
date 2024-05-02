@@ -1,0 +1,68 @@
+***************************ADD****************************************************************
+<h3>Ajout d'une S/catégorie</h3>
+<div class="container">
+
+<form >
+
+    <div class="form-group">
+        <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="Nom S/Catégorie" 
+        id="nomscategorie" name="nomscategorie" 
+        [(ngModel)]="nouvcategorie().nomscategorie"
+        >
+        </div>
+      </div>
+
+    <div class="form-group">
+        <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="Image Catégorie" 
+        id="imagecategorie" name="imagecategorie"  
+      [(ngModel)]="nouvcategorie().imagescategorie"
+        >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+        id="categorieID" name="categorieID" 
+        [(ngModel)]="nouvcategorie().categorieID"
+        >
+        </div>
+      </div>
+
+    <div class="form-group">
+      <div class="col-sm-4">
+    <button type="submit" class="btn btn-success" (click)="addScateg()">Enregistrer</button>
+   
+    </div>
+    </div>
+
+  </form>
+</div>
+
+
+
+
+*************************************Cas http dans ngOnit**********************************
+
+@for (item of scategorie(); track item.nomscategorie) {
+  <li> {{ item.nomscategorie }} </li>
+} @empty {
+  <li> There are no items. </li>
+}
+
+*************************************Cas http sans ngOnit**********************************
+
+@for (item of scateg(); track item.nomscategorie) {
+  <li> {{ item.nomscategorie }} </li>
+} @empty {
+  <li> There are no items. </li>
+}
+
+*************************************Cas fetch dans ngOnit**********************************
+
+@for (item of scategorieFetch(); track item.nomscategorie) {
+  <li> {{ item.nomscategorie }} </li>
+} @empty {
+  <li> There are no items. </li>
+}

@@ -1,13 +1,12 @@
-<h3>Ajout d'une catégorie</h3>
+
 <div class="container">
 
 <form >
-    
- 
+
     <div class="form-group">
         <div class="col-sm-4">
-        <input type="text" class="form-control" placeholder="Nom Catégorie" 
-        id="nomcategorie" name="nomcategorie" 
+        <input type="text" class="form-control" placeholder="Nom S/Catégorie" 
+        id="nomscategorie" name="nomscategorie" 
         [(ngModel)]="nouvcategorie().nomcategorie"
         >
         </div>
@@ -17,22 +16,19 @@
         <div class="col-sm-4">
         <input type="text" class="form-control" placeholder="Image Catégorie" 
         id="imagecategorie" name="imagecategorie"  
-        [(ngModel)]="nouvcategorie().imagecategorie"
+      [(ngModel)]="nouvcategorie().imagecategorie"
         >
         </div>
       </div>
- 
-   
+     
     <div class="form-group">
       <div class="col-sm-4">
     <button type="submit" class="btn btn-success" (click)="addCateg()">Enregistrer</button>
-    <button type="button" class="btn btn-default" (click)="reset()">Reset</button>
+   
     </div>
     </div>
+
   </form>
 </div>
-<p>Categories List:</p>
-<ul>
-    <li *ngFor="let cat of categories()">{{ cat.nomcategorie }}</li>
-</ul>
 
+Child interval: {{interval}}
